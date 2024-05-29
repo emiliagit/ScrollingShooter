@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    public float bulletForce = 10f;
+    public float bulletForce = 4f;
 
     private float tiempoUltimoDisparo;
     [SerializeField] private float cadenciaDisparo = 0.3F;
@@ -28,8 +28,8 @@ public class PlayerShoot : MonoBehaviour
         tiempoUltimoDisparo = Time.time;
         GameObject nuevaBala = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = nuevaBala.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        Destroy(nuevaBala, 1f);
+        rb.AddForce(firePoint.forward * -bulletForce, ForceMode2D.Impulse);
+        Destroy(nuevaBala, 5f);
 
     }
 

@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Ship1 : EnemyPadre
 {
-    public float velocidadMovimiento = 1.5f;
-    public float distanciaMovimiento = 4f;
+    public float ScrollSpeed = 8.0f;
+   
 
-    private Vector3 posicionInicial;
-    //public Animator ahip1animator;
-
-    
     void Start()
     {
         hp = 3;
 
-        posicionInicial = transform.position;
     }
 
     void Update()
@@ -39,11 +34,8 @@ public class Ship1 : EnemyPadre
     {
         if (hp > 0)
         {
-            // Calcula la posición a la que el fantasma debe moverse
-            Vector3 posicionDestino = posicionInicial + Vector3.up * distanciaMovimiento * Mathf.Sin(Time.time * velocidadMovimiento);
-
-            // Mueve al fantasma hacia la posición destino
-            transform.position = Vector3.Lerp(transform.position, posicionDestino, Time.deltaTime);
+            
+            transform.Translate(Vector3.right * ScrollSpeed * Time.deltaTime);
 
         }
 

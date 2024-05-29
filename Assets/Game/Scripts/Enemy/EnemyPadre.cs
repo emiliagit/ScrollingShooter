@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyPadre : MonoBehaviour
 {
-    protected float hp;
+    public float hp;
 
    
     // Start is called before the first frame update
@@ -21,16 +21,9 @@ public class EnemyPadre : MonoBehaviour
 
     public void RecibirDanio()
     {
-        hp -= 10;
+        hp -= 1;
        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Colision con player");
-            //collision.gameObject.GetComponent<LifePlayer>().TakeDamage(1);
-        }
-    }
+    //collision.gameObject.GetComponent<LifePlayer>().TakeDamage(1);
 }

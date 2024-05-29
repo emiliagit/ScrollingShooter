@@ -1,53 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class Ship2 : EnemyPadre
 {
-    public float speed = 5f; // Velocidad de movimiento del enemigo
-    public float zigzagWidth = 3f; // Anchura del zigzag
-    public float forwardSpeed = 2f; // Velocidad de avance hacia adelante
+    public float moveSpeed = 3f; // Velocidad de movimiento hacia adelante
+    public float moveDistance = 2f; // Distancia total de movimiento hacia arriba y hacia abajo
+    public float rotateSpeed = 90f; // Velocidad de rotación
 
-    private bool movingRight = true;
-    private float zigzagTimer = 0f;
-    public float zigzagDuration = 1f; // Duración del movimiento en una dirección (izquierda o derecha)
-
+    private Rigidbody rb;
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
 
     private void Start()
     {
-        hp = 6;
+        rb = GetComponent<Rigidbody>();
+        originalPosition = transform.position;
+        originalRotation = transform.rotation;
     }
-    void Update()
+
+    private void Update()
     {
-        MoveInZigZag();
+        // Movimiento hacia adelante
+        Vector3 forwardMovement = transform.forward * moveSpeed * Time.deltaTime;
+        rb.MovePosition(transform.position + forwardMovement);
+
+        //// Movimiento hacia arriba y hacia abajo
+        //float newY = originalPosition.y + Mathf.Sin(Time.time) * moveDistance;
+        //transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+        // Rotación gradual
+        Vector3 targetDirection = new Vector3(forwardMovement.x, 0f, forwardMovement.z).normalized;
+        Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
     }
 
-    void MoveInZigZag()
-    {
-        // Calcula la posición en zigzag
-        Vector2 newPos = transform.position;
-        if (movingRight)
-        {
-            newPos.y += speed * Time.deltaTime;
-        }
-        else
-        {
-            newPos.y -= speed * Time.deltaTime;
-        }
-
-        // Avanza hacia adelante
-        newPos.x -= forwardSpeed * Time.deltaTime;
-
-        // Actualiza la posición del enemigo
-        transform.position = newPos;
-
-        // Actualiza el temporizador y cambia de dirección si es necesario
-        zigzagTimer += Time.deltaTime;
-        if (zigzagTimer >= zigzagDuration)
-        {
-            movingRight = !movingRight;
-            zigzagTimer = 0f;
-        }
-    }
 }
 

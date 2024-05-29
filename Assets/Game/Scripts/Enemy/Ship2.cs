@@ -23,7 +23,7 @@ public class Ship2 : EnemyPadre
     private void Update()
     {
         // Movimiento hacia adelante
-        Vector3 forwardMovement = transform.forward * moveSpeed * Time.deltaTime;
+        Vector3 forwardMovement = transform.right * moveSpeed * Time.deltaTime;
         rb.MovePosition(transform.position + forwardMovement);
 
         //// Movimiento hacia arriba y hacia abajo

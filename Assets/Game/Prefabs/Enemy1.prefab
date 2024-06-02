@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: -7782522169838308999}
   - component: {fileID: 9089517000650418016}
   m_Layer: 0
-  m_Name: Enemy1 1
+  m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,12 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1e844273171db4cb536b72f9e477c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 674574494449265788, guid: f5ae2e8c8427a9349b987d6529c60e97, type: 3}
+  projectilePrefab: {fileID: 492056557264270909, guid: 56273756be724bc40afeb0a9b2b213a3, type: 3}
   firePoint: {fileID: 6029075704808180802}
-  projectilesPerWave: 5
-  timeBetweenWaves: 5
-  timeBetweenProjectiles: 1
-  bulletForce: 5
+  bulletForce: 7
+  FireRate: 1
 --- !u!50 &9089517000650418016
 Rigidbody2D:
   serializedVersion: 4

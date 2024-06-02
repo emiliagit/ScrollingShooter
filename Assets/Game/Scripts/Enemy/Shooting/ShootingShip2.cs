@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ShootingShip2 : MonoBehaviour
 {
-    public GameObject bulletPrefab;  // Prefab de la bala
-    public Transform firePoint;  // Punto desde donde se disparan las balas
-    public float fireRate = 3f;  // Frecuencia de disparo
+    public GameObject bulletPrefab;  
+
+    public Transform firePoint;  
+
+    public float fireRate = 3f;  
 
     private float nextFireTime = 0f;
 
     public float bulletForce = 2f;
+
 
     void Update()
     {

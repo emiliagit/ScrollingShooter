@@ -10,6 +10,8 @@ public class ShootingShip2 : MonoBehaviour
 
     private float nextFireTime = 0f;
 
+    public float bulletForce = 2f;
+
     void Update()
     {
         if (Time.time >= nextFireTime)
@@ -21,6 +23,8 @@ public class ShootingShip2 : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject nuevaBala = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = nuevaBala.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.forward * -bulletForce, ForceMode2D.Impulse);
     }
 }

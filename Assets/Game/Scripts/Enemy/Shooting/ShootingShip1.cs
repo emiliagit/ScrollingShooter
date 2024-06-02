@@ -41,9 +41,6 @@ public class ShootingShip1 : MonoBehaviour
 
     private void ShootProjectile()
     {
-        //// Instantiate the projectile at the firePoint's position and rotation
-        //Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-
         GameObject nuevaBala = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = nuevaBala.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.forward * -bulletForce, ForceMode2D.Impulse);

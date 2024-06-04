@@ -14,7 +14,7 @@ public class FirePlayer : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)
@@ -35,16 +35,16 @@ public class FirePlayer : MonoBehaviour
     //    }
     //}
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-        
-    //}
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("colison");
-        }
+
+        Debug.Log("colison");
     }
+       
 }
+
+//private void OnCollisionEnter(Collision collision)
+//    {
+       
+//    }
+//}

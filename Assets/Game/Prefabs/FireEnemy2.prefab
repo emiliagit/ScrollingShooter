@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6085624392416363733}
   - component: {fileID: 6085624392416363722}
   - component: {fileID: 5637682004241581280}
+  - component: {fileID: -7499530834222280119}
   m_Layer: 0
   m_Name: FireEnemy2
   m_TagString: Untagged
@@ -3629,9 +3630,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -4867,3 +4868,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7499530834222280119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6085624392416363723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063d7124c9dd9354eb4baf585d7e8c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePrefab: {fileID: 6124034588846450879, guid: c41640c099734b14f9a82e7d17a4471a, type: 3}

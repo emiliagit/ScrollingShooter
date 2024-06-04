@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 492056557264270906}
   - component: {fileID: 492056557264270907}
   - component: {fileID: 17211488697501714}
+  - component: {fileID: 4133883453572984549}
   m_Layer: 0
   m_Name: fireEnemy1
   m_TagString: Untagged
@@ -3629,9 +3630,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
@@ -4867,3 +4868,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4133883453572984549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492056557264270909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063d7124c9dd9354eb4baf585d7e8c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePrefab: {fileID: 3003170136095214662, guid: d2a75945cd9541e439aa4db0ae60cd38, type: 3}

@@ -5,7 +5,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class FireEnemy : MonoBehaviour
 {
-    public GameObject firePrefab;
+    //public GameObject firePrefab;
 
     private void Start()
     {
@@ -17,26 +17,29 @@ public class FireEnemy : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent(out LifePlayer player))
-        {
-            player.RecibirDanio(10);
-            Debug.Log("vida restada");
-        }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    //if (collision.gameObject.TryGetComponent(out LifePlayer player))
+    //    //{
+    //    //    player.RecibirDanio(10);
+    //    //    Debug.Log("vida restada");
+    //    //}
 
-        if (collision.gameObject.CompareTag("Player"))
+    //    //if (collision.gameObject.CompareTag("Player"))
+    //    //{
+    //    //    Debug.Log("colision con player");
+    //    //    GameObject fire = Instantiate(firePrefab, transform.position, Quaternion.identity);
+    //    //    Destroy(fire, 1f);
+    //    //    Debug.Log("Colision");
+    //    //    Destroy(gameObject);
+    //    //}
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("colision con player");
-            GameObject fire = Instantiate(firePrefab, transform.position, Quaternion.identity);
-            Destroy(fire, 1f);
-            Debug.Log("Colision");
-            Destroy(gameObject);
+            Debug.Log("COlision con player");
         }
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-        
-    //}
 }

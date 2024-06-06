@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3964007983544629673}
   - component: {fileID: 7378465176204909840}
   m_Layer: 0
-  m_Name: proyectil
+  m_Name: firePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

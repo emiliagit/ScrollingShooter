@@ -4,26 +4,38 @@ using UnityEngine;
 
 public class SpawnerEnemigos : MonoBehaviour
 {
-    
-    public float spawnInterval = 1f; 
-
     //listas para posicion de enemigos;
     public GameObject[] enemyPrefab;
     public Vector3[] spawnPosition;
 
-    //cantidad de enemigos en mapa
-    public int maxEnemyCount = 8;
-    public int currentEnemyCount = 0;
-    
-
     bool spawnerActive = true;
-    public float delay = 10f; 
+    public float delay = 3f;
+
+    public float timeToDeactivate = 5f;
+    private float time;
+
 
     private void Start()
     {
-        
+        time = 0f;
+
         spawnerActive = true;
         StartCoroutine(timer());
+       
+    }
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+
+        if(time > timeToDeactivate)
+        {
+            spawnerActive=false;
+            Debug.Log("Spawner desactivado");
+            enabled = false;
+
+            
+        }
     }
 
     private IEnumerator timer()
@@ -35,25 +47,12 @@ public class SpawnerEnemigos : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (currentEnemyCount >= maxEnemyCount)
-        {
-            spawnerActive = false;
-            //Debug.Log("se desactivo spawner");
-        }
-        if (currentEnemyCount < maxEnemyCount)
-        {
-            spawnerActive = true;
-            //Debug.Log("se activo spawner");
-        }
-    }
 
     void SpawnEnemy()
     {
-        if (currentEnemyCount < maxEnemyCount)
+        if (time < timeToDeactivate)
         {
-            currentEnemyCount++;
+            Debug.Log("Spawner active");
 
             int randomIndex = Random.Range(0, enemyPrefab.Length);
             int randomPosition = Random.Range(0, spawnPosition.Length);
@@ -61,7 +60,8 @@ public class SpawnerEnemigos : MonoBehaviour
             GameObject randomEnemy = enemyPrefab[randomIndex];
 
             Instantiate(randomEnemy, spawnPosition[randomPosition], randomEnemy.transform.rotation);
-
         }
     }
+
+   
 }

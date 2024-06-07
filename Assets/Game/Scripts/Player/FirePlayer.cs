@@ -5,49 +5,44 @@ using UnityEngine;
 
 public class FirePlayer : MonoBehaviour
 {
-    //public GameObject firePrefab;
+    public GameObject firePrefab;
+
+     EnemyPadre enemy;
 
     private void Start()
     {
-        Destroy(gameObject, 10f);
+       
     }
 
     private void Update()
     {
-
-    }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-
-    //    //if (collision.gameObject.TryGetComponent(out EnemyPadre enemy))
-    //    //{
-    //    //    enemy.RecibirDanio();
-    //    //}
-
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-
-    //        //GameObject fire = Instantiate(firePrefab, transform.position, Quaternion.identity);
-    //        //Destroy(fire, 1f);
-    //        Debug.Log("Colision");
-    //        Destroy(gameObject);
-    //    }
-    //}
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(!collision.gameObject.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.Space)) // Suponiendo que el espacio es el botón de ataque
         {
-            Debug.Log("colison");
+            // Llamar a la función TakeDamage en el enemigo
+            enemy.TakeDamage(10);
         }
-           
     }
+
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            GameObject fire = Instantiate(firePrefab, transform.position, Quaternion.identity);
+            Destroy(fire, 1f);
+            Debug.Log("Colision");
+            Destroy(gameObject);
+        }
+
+        //if (collision.gameObject.TryGetComponent(out EnemyPadre enemy))
+        //{
+        //    enemy.TakeDamage(10);
+        //}
+
        
+    }
+
 }
 
-//private void OnCollisionEnter(Collision collision)
-//    {
-       
-//    }
-//}
+
+

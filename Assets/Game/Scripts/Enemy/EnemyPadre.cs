@@ -4,26 +4,37 @@ using UnityEngine;
 
 public class EnemyPadre : MonoBehaviour
 {
-    public float hp;
-
    
-    // Start is called before the first frame update
+   
+  
+    public float currentHealth;
+
+  
+    public GameObject deathEffect;
+
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float damage)
     {
-        
+      
+        currentHealth -= damage;
+
     }
 
-    public void RecibirDanio()
+   
+    protected void Die()
     {
-        hp -= 1;
-       
+      
+        if (deathEffect != null)
+        {
+            Instantiate(deathEffect, transform.position, transform.rotation);
+        }
+
+        
+        Destroy(gameObject);
     }
 
-    //collision.gameObject.GetComponent<LifePlayer>().TakeDamage(1);
+
 }

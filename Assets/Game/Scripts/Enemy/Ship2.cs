@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
-public class Ship2 : EnemyPadre
+public class Ship2 : MonoBehaviour
 {
     public float forwardSpeed = 5.0f; // Velocidad de movimiento hacia adelante
     public float verticalSpeed = 2.0f; // Velocidad de movimiento vertical

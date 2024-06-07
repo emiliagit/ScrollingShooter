@@ -9,7 +9,7 @@ public class Ship1 : EnemyPadre
 
     void Start()
     {
-        hp = 3;
+        currentHealth = 50;
 
     }
 
@@ -17,27 +17,17 @@ public class Ship1 : EnemyPadre
     {
         ShipMovement();
 
-
-        
-        //RecibirDanio();
-
-        if (hp <= 0)
-        { 
-            //ahip1animator.SetBool("enemyDeath", true);
-
-
-            Destroy(gameObject, 1f);
+        if (currentHealth <= 0)
+        {
+            Die();
         }
+
     }
 
     public void ShipMovement()
     {
-        if (hp > 0)
-        {
             
-            transform.Translate(Vector3.right * ScrollSpeed * Time.deltaTime);
-
-        }
+        transform.Translate(Vector3.right * ScrollSpeed * Time.deltaTime);
 
     }
 }

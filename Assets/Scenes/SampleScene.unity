@@ -1109,12 +1109,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9152573078875502383, guid: 97cf231e20c4e2844bdff57a71095055, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 5831860615075932153, guid: 9685e520b6b516a438ef70d717969ce8, type: 3}
+    - target: {fileID: 9152573078875502383, guid: 97cf231e20c4e2844bdff57a71095055, type: 3}
       propertyPath: forwardSpeed
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9152573078875502383, guid: 97cf231e20c4e2844bdff57a71095055, type: 3}
+      propertyPath: currentHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9152573078875502383, guid: 97cf231e20c4e2844bdff57a71095055, type: 3}
       propertyPath: verticalRange
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

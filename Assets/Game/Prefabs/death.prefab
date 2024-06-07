@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5831860615075932154}
   - component: {fileID: 5831860615075932155}
   m_Layer: 0
-  m_Name: Style1JetEngine2
+  m_Name: death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

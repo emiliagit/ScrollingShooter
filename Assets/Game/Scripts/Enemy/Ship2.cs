@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.PlayerSettings;
 
-public class Ship2 : MonoBehaviour
+public class Ship2 : EnemyPadre
 {
     public float forwardSpeed = 5.0f; // Velocidad de movimiento hacia adelante
     public float verticalSpeed = 2.0f; // Velocidad de movimiento vertical
@@ -13,7 +13,7 @@ public class Ship2 : MonoBehaviour
 
     void Start()
     {
-       
+        currentHealth = 50;
         initialY = transform.position.y;
     }
 
@@ -25,6 +25,12 @@ public class Ship2 : MonoBehaviour
         // Movimiento vertical
         float newY = initialY + Mathf.Sin(Time.time * verticalSpeed) * verticalRange;
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
 }

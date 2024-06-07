@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7602363237473255072}
   - component: {fileID: 7602363237473255079}
   m_Layer: 0
-  m_Name: StyleJetEngine
+  m_Name: hit player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

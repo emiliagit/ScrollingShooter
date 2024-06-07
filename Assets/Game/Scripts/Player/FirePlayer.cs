@@ -16,11 +16,7 @@ public class FirePlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) // Suponiendo que el espacio es el botón de ataque
-        {
-            // Llamar a la función TakeDamage en el enemigo
-            enemy.TakeDamage(10);
-        }
+       
     }
 
     
@@ -34,12 +30,12 @@ public class FirePlayer : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //if (collision.gameObject.TryGetComponent(out EnemyPadre enemy))
-        //{
-        //    enemy.TakeDamage(10);
-        //}
+        if (collision.gameObject.TryGetComponent(out EnemyPadre enemy))
+        {
+            enemy.TakeDamage(10);
+        }
 
-       
+
     }
 
 }

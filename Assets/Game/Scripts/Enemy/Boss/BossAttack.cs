@@ -2,40 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossAttack : MonoBehaviour
+public class BossAttack : EnemyPadre
 {
-    public GameObject bulletPrefab; // Prefab de la bala
-    public Transform firePoint; // Punto desde donde se disparará la bala
-    public float bulletSpeed = 5f; // Velocidad de la bala
-    public float fireRate = 1f; // Tiempo entre disparos
-    private float nextFireTime = 0f;
+    //public GameObject bulletPrefab; 
+    //public Transform firePoint; 
 
+    //public float bulletSpeed = 5f;
+
+    //public float fireRate = 1f;
+    //private float nextFireTime = 0f;
+
+     bool fireEffectSpawned = false;
 
     private Transform player;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform; // Asigna el jugador con la etiqueta "Player"
+        currentHealth = 60;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
-        if (Time.time > nextFireTime)
+        //if (Time.time > nextFireTime)
+        //{
+        //    nextFireTime = Time.time + fireRate;
+        //    Shoot();
+        //}
+
+        if( currentHealth <= 50 && !fireEffectSpawned)
         {
-            nextFireTime = Time.time + fireRate;
-            Shoot();
+            DamageBoss();
+            fireEffectSpawned = true;
         }
        
     }
 
-    void Shoot()
-    {
-        if (player != null)
-        {
-            Vector2 direction = (player.position - firePoint.position).normalized; // Dirección hacia el jugador
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed; // Asigna la velocidad a la bala
-        }
-    }
+    //void Shoot()
+    //{
+    //        Vector2 direction = (player.position - firePoint.position).normalized; 
+    //        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    //        bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed; 
+    //        Destroy(bullet, 3f);
+
+
+    //}
 
 }

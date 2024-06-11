@@ -13,7 +13,7 @@ public class Ship2 : EnemyPadre
 
     void Start()
     {
-        currentHealth = 50;
+        currentHealth = 30;
         initialY = transform.position.y;
     }
 
@@ -30,6 +30,7 @@ public class Ship2 : EnemyPadre
         if (currentHealth <= 0)
         {
             Die();
+            Debug.Log("muerte");
         }
     }
 

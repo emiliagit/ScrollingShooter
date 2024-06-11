@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063d7124c9dd9354eb4baf585d7e8c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePrefab: {fileID: 3003170136095214662, guid: d2a75945cd9541e439aa4db0ae60cd38, type: 3}
+  firePrefab: {fileID: 104829970813648393, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
 --- !u!50 &7519378831643267782
 Rigidbody2D:
   serializedVersion: 4

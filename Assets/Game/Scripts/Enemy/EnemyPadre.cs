@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPadre : MonoBehaviour
+public abstract class EnemyPadre : MonoBehaviour
 {
-   
-   
-  
     public float currentHealth;
 
   
     public GameObject deathEffect;
+    public Transform deathEffectPoint;
 
-    void Start()
-    {
-    }
+    public GameObject fireEfectBoss;
+    public Transform fireEfectBossPoint;
+
+   
+
+   
 
     public void TakeDamage(float damage)
     {
@@ -26,14 +27,24 @@ public class EnemyPadre : MonoBehaviour
    
     protected void Die()
     {
-      
         if (deathEffect != null)
         {
-            Instantiate(deathEffect, transform.position, transform.rotation);
+            Instantiate(deathEffect, deathEffectPoint.position, deathEffectPoint.rotation);
+            Debug.Log("animacion muerte instanciada");
         }
 
         
         Destroy(gameObject);
+    }
+
+    protected void DamageBoss()
+    {
+       
+        if( currentHealth <= 50 )
+        {
+            Instantiate(fireEfectBoss, fireEfectBossPoint.position, fireEfectBossPoint.rotation);
+            
+        }
     }
 
 

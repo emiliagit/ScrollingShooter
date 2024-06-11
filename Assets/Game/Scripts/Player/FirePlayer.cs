@@ -7,7 +7,7 @@ public class FirePlayer : MonoBehaviour
 {
     public GameObject firePrefab;
 
-     EnemyPadre enemy;
+    EnemyPadre enemy;
 
     private void Start()
     {
@@ -33,7 +33,10 @@ public class FirePlayer : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out EnemyPadre enemy))
         {
             enemy.TakeDamage(10);
+            Debug.Log("daño de 10 a enemigo");
         }
+       
+        
 
 
     }

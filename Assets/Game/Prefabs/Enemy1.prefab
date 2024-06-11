@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1162264475261441305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 991092164416912671}
+  m_Layer: 0
+  m_Name: Position animation death
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &991092164416912671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162264475261441305}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.2041626, y: -0.1, z: -0.6829385}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7877887349833497659}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2894865586489495675
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +63,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 991092164416912671}
   - {fileID: 2603082733233046856}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -47,8 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04263d7e9eb5c9f4a87c0f8d174ebab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 50
-  deathEffect: {fileID: 5831860615075932153, guid: 9685e520b6b516a438ef70d717969ce8, type: 3}
+  currentHealth: 10
+  deathEffect: {fileID: 1666912503122848733, guid: cc0097ddfc5ee3d40972f55fe20afeb7, type: 3}
+  deathEffectPoint: {fileID: 991092164416912671}
   ScrollSpeed: 0
 --- !u!114 &1391192023033808944
 MonoBehaviour:
@@ -57,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2894865586489495675}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f1e844273171db4cb536b72f9e477c5, type: 3}
   m_Name: 

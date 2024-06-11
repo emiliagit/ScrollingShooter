@@ -103,8 +103,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9076201022078511009}
   - component: {fileID: 561032109418558176}
-  - component: {fileID: 4643666272038641136}
-  - component: {fileID: 3486087646652319549}
   m_Layer: 0
   m_Name: Ship6
   m_TagString: Untagged
@@ -182,36 +180,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4643666272038641136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897248543941719343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5055db39eb40f45bdb89629e9c7e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1368376898538262307, guid: 210adf0a0a435ec4a9b86bab458b018c, type: 3}
-  firePoint: {fileID: 8981109361281646823}
-  bulletSpeed: 5
-  fireRate: 1
---- !u!114 &3486087646652319549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6897248543941719343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc3b430fe06eb934fb16e800a68fb254, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 8029538948298470430, guid: 75fecfab0f426f44bb8882c689ee1206, type: 3}
-  bombPoint1: {fileID: 6309249132565311814}
-  bombPoint2: {fileID: 6865375766558529869}
-  bombSpeed: 3
-  bombRate: 5

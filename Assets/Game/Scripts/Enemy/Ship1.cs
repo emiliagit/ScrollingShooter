@@ -9,7 +9,7 @@ public class Ship1 : EnemyPadre
 
     void Start()
     {
-        currentHealth = 50;
+        currentHealth = 20;
 
     }
 

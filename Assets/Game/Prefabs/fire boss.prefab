@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9222089005007079952}
   - component: {fileID: 2593802791548123895}
   - component: {fileID: 6871566920399058388}
+  - component: {fileID: 7657607519089258330}
   m_Layer: 0
   m_Name: fire boss
   m_TagString: Untagged
@@ -90,12 +91,25 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.033822775, y: 0.0028657913}
   serializedVersion: 2
   m_Radius: 0.27303386
+--- !u!114 &7657607519089258330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951489928791838741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920de1e57e4e6c24998ec4c20d913312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePrefab: {fileID: 104829970813648393, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
 --- !u!1001 &1795484105431739934
 PrefabInstance:
   m_ObjectHideFlags: 0

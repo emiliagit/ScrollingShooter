@@ -6,25 +6,25 @@ public abstract class EnemyPadre : MonoBehaviour
 {
     public float currentHealth;
 
-  
+
     public GameObject deathEffect;
     public Transform deathEffectPoint;
 
     public GameObject fireEfectBoss;
-    public Transform fireEfectBossPoint;
+    public Transform fireEfectBossPoint1;
+    public Transform fireEfectBossPoint2;
 
-   
-
-   
+    protected GameObject FireEfect1;
+    protected GameObject FireEfect2;
 
     public void TakeDamage(float damage)
     {
-      
+
         currentHealth -= damage;
 
     }
 
-   
+
     protected void Die()
     {
         if (deathEffect != null)
@@ -33,19 +33,15 @@ public abstract class EnemyPadre : MonoBehaviour
             Debug.Log("animacion muerte instanciada");
         }
 
-        
         Destroy(gameObject);
     }
 
     protected void DamageBoss()
     {
-       
-        if( currentHealth <= 50 )
-        {
-            Instantiate(fireEfectBoss, fireEfectBossPoint.position, fireEfectBossPoint.rotation);
-            
-        }
-    }
+       FireEfect1 = Instantiate(fireEfectBoss, fireEfectBossPoint1.position, fireEfectBossPoint1.rotation);
 
+       FireEfect2 = Instantiate(fireEfectBoss, fireEfectBossPoint2.position, fireEfectBossPoint2.rotation);
+
+    }
 
 }

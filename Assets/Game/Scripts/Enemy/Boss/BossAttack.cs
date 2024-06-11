@@ -18,7 +18,7 @@ public class BossAttack : EnemyPadre
 
     void Start()
     {
-        currentHealth = 60;
+        currentHealth = 20;
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -35,6 +35,14 @@ public class BossAttack : EnemyPadre
             DamageBoss();
             fireEffectSpawned = true;
         }
+
+        if(currentHealth <= 0 )
+        {
+            Die();
+            Destroy(FireEfect1);
+            Destroy(FireEfect2);
+            Debug.Log("smoke desactivado");
+        } 
        
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossAttack : EnemyPadre
 {
@@ -33,13 +34,7 @@ public class BossAttack : EnemyPadre
 
     void Update()
     {
-        
-       
 
-    }
-
-    private void FixedUpdate()
-    {
         if (currentHealth <= 50 && !fireEffectSpawned)
         {
             DamageBoss();
@@ -72,7 +67,14 @@ public class BossAttack : EnemyPadre
             Shoot();
         }
 
+        if(currentHealth <= 0)
+        {
+            SceneManager.LoadScene("Victory");
+        }
+
     }
+
+    
 
     public void Shoot()
     {

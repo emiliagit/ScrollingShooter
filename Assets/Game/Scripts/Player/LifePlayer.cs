@@ -28,7 +28,7 @@ public class LifePlayer : MonoBehaviour
 
         if (hp <= 0)
         {
-            SceneManager.LoadScene("Derrota");
+            SceneManager.LoadScene("GameOver");
 
             Cursor.lockState = CursorLockMode.None;
         }

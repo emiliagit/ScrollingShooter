@@ -19,16 +19,22 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
+       
+
+    }
+
+    private void FixedUpdate()
+    {
         float horizontalMovement = Input.GetAxis("Horizontal");
         float verticalMovement = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(horizontalMovement, verticalMovement);
 
         Vector2 newPosition = rb.position + movement * movementSpeed * Time.deltaTime;
-        //rb.velocity = movement * movementSpeed;
 
 
-        // Verificar los límites en el eje X
+
         if (newPosition.x < minX)
         {
             newPosition.x = minX;
@@ -40,11 +46,9 @@ public class PlayerController : MonoBehaviour
 
         rb.MovePosition(newPosition);
 
-       
-
     }
 
-  
+
 
 
 

@@ -10,12 +10,14 @@ public abstract class EnemyPadre : MonoBehaviour
     public GameObject deathEffect;
     public Transform deathEffectPoint;
 
+
     public GameObject fireEfectBoss;
     public Transform fireEfectBossPoint1;
     public Transform fireEfectBossPoint2;
 
     protected GameObject FireEfect1;
     protected GameObject FireEfect2;
+
 
     public void TakeDamage(float damage)
     {
@@ -38,10 +40,12 @@ public abstract class EnemyPadre : MonoBehaviour
 
     protected void DamageBoss()
     {
-       FireEfect1 = Instantiate(fireEfectBoss, fireEfectBossPoint1.position, fireEfectBossPoint1.rotation);
+        FireEfect1 = Instantiate(fireEfectBoss, fireEfectBossPoint1.position, fireEfectBossPoint1.rotation);
 
-       FireEfect2 = Instantiate(fireEfectBoss, fireEfectBossPoint2.position, fireEfectBossPoint2.rotation);
+        FireEfect2 = Instantiate(fireEfectBoss, fireEfectBossPoint2.position, fireEfectBossPoint2.rotation);
 
     }
+
+
 
 }

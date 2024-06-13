@@ -247,8 +247,8 @@ MonoBehaviour:
   fireEfectBoss: {fileID: 0}
   fireEfectBossPoint1: {fileID: 0}
   fireEfectBossPoint2: {fileID: 0}
-  forwardSpeed: 5
-  verticalSpeed: 3
+  forwardSpeed: 4
+  verticalSpeed: 2
   verticalRange: 3
 --- !u!114 &2398560458210727365
 MonoBehaviour:

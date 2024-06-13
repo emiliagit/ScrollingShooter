@@ -19,9 +19,9 @@ public class BossAttack : EnemyPadre
     public float moveSpeed = 5f;
     public float attackDelay = 2f;
 
-    //private bool isMoving = false;
+  
     private bool hasArrived = false;
-    //private float attackTimer = 0f;
+   
 
     private Transform player;
 
@@ -33,12 +33,13 @@ public class BossAttack : EnemyPadre
 
     void Update()
     {
-        //if (Time.time > nextFireTime)
-        //{
-        //    nextFireTime = Time.time + fireRate;
-        //    Shoot();
-        //}
+        
+       
 
+    }
+
+    private void FixedUpdate()
+    {
         if (currentHealth <= 50 && !fireEffectSpawned)
         {
             DamageBoss();
@@ -57,7 +58,7 @@ public class BossAttack : EnemyPadre
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         int enemyCount = enemies.Length;
 
-      
+
         if (enemyCount == 0 && !hasArrived)
         {
             MoveToTarget();

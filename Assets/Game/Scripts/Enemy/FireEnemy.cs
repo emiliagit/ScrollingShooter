@@ -32,6 +32,10 @@ public class FireEnemy : MonoBehaviour
             player.RecibirDanio(10);
             Debug.Log("vida restada");
         }
+        if (collision.gameObject.CompareTag("FirePlayer"))
+        {
+            Destroy(gameObject);
+        }
 
     }
 

@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6868555664175363852}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,10 @@ MonoBehaviour:
   currentHealth: 10
   deathEffect: {fileID: 1666912503122848733, guid: cc0097ddfc5ee3d40972f55fe20afeb7, type: 3}
   deathEffectPoint: {fileID: 991092164416912671}
-  ScrollSpeed: 0
+  fireEfectBoss: {fileID: 0}
+  fireEfectBossPoint1: {fileID: 0}
+  fireEfectBossPoint2: {fileID: 0}
+  ScrollSpeed: 3
 --- !u!114 &1391192023033808944
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -59,7 +59,9 @@ public class SpawnerEnemigos : MonoBehaviour
 
             GameObject randomEnemy = enemyPrefab[randomIndex];
 
-            Instantiate(randomEnemy, spawnPosition[randomPosition], randomEnemy.transform.rotation);
+            GameObject enemyInstance = Instantiate(randomEnemy, spawnPosition[randomPosition], randomEnemy.transform.rotation);
+
+            Destroy(enemyInstance, 10f ) ;
         }
     }
 

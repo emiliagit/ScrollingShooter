@@ -121,7 +121,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4951489928791838741, guid: b1d95186897939247b0e65d6fe20a9c4, type: 3}
   firePoint: {fileID: 177131596361421656}
   bulletSpeed: 5
-  fireRate: 1
+  fireRate: 0.8
+  enemyTag: Enemy
+  targetPosition: {x: 9.64, y: 2.69, z: 0.6749605}
+  moveSpeed: 5
+  attackDelay: 2
 --- !u!61 &6800535987944545249
 BoxCollider2D:
   m_ObjectHideFlags: 0

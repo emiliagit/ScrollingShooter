@@ -244,9 +244,12 @@ MonoBehaviour:
   currentHealth: 10
   deathEffect: {fileID: 1666912503122848733, guid: cc0097ddfc5ee3d40972f55fe20afeb7, type: 3}
   deathEffectPoint: {fileID: 8843183507745464437}
-  forwardSpeed: 0
+  fireEfectBoss: {fileID: 0}
+  fireEfectBossPoint1: {fileID: 0}
+  fireEfectBossPoint2: {fileID: 0}
+  forwardSpeed: 5
   verticalSpeed: 3
-  verticalRange: 0
+  verticalRange: 3
 --- !u!114 &2398560458210727365
 MonoBehaviour:
   m_ObjectHideFlags: 0
